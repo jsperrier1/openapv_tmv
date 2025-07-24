@@ -766,10 +766,9 @@ static int clear_data(char *fname)
     fp = fopen(fname, "rb");
     if (fp == NULL)
     {
-        return;
+        return 0;
     }
     fclose(fp);
-
 
     fp = fopen(fname, "wb");
     if(fp == NULL) {
